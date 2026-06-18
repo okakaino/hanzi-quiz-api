@@ -9,3 +9,8 @@ class ItemCreate(BaseModel):
 class Item(ItemCreate):
     model_config = ConfigDict(from_attributes=True)
     id: int
+
+class QuizAnswer(BaseModel):
+    item_id: int
+    hanzi_option: str
+    pinyin_option: str
